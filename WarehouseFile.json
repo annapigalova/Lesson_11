@@ -1,0 +1,48 @@
+{
+   "storeNumber": 1,
+    
+   "product": [{
+       "category": "Book",
+       "name": "Java for dummies",
+       "manufacturerCode": "A150",
+       "creationDate":  "2013-01-01",
+       "description": "Java book for beginners" 
+   }, {
+       "category": "Book",
+       "name": "Thinking in java",
+       "manufacturerCode": "XR456",
+       "creationDate":  "2013-05-15",
+       "description": "Java book for professionals" 
+   },
+   {
+       "category": "Book",
+       "name": "The data warehouse toolkit",
+       "manufacturerCode": "SD280",
+       "creationDate":  "2002-03-15",
+       "description": "Kimball approach to building DWH" 
+   },
+   {
+       "category": "Book",
+       "name": "Bulding the DataWarehouse",
+       "manufacturerCode": "SD280",
+       "creationDate":  "2001-10-21",
+       "description": "Inmon approach to building DWH" 
+   },
+   {
+       "category": "Magazine",
+       "name": "PC Mag",
+       "manufacturerCode": "E100",
+       "creationDate":  "2013-01-01",
+       "description": "IT magazine that covers a variety of topics, and its articles are not exclusive to one particular platform" 
+   },
+   {
+       "category": "Magazine",
+       "name": "XC234",
+       "manufacturerCode": "MacFormat",
+       "creationDate":  "2013-01-01",
+       "description": "MacFormat is an IT magazine for these Apple enthusiasts." 
+   }
+   
+   
+   ]
+}
