@@ -7,27 +7,21 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
 
 public class StoreList {
 
-	private ArrayList<Store> storeList = new ArrayList<>();
-
-	public ArrayList<Store> readFromJson(String filename) {
-
+	private List<Store> storeList;
+//do method boolean(read or not) and consequently add getter for storeList
+	
+	public List<Store> readFromJson(String filename) {
 		
 		try {
 			Gson gson = new Gson();
-			JsonParser jsonParser = new JsonParser();
 			BufferedReader br = new BufferedReader(new FileReader(filename));
-			JsonElement jsonElement = jsonParser.parse(br);
+			Type type = new TypeToken<List<Store>>(){}.getType();
 			
-			Type type = new TypeToken<List<Store>>() {}.getType();
-			storeList = gson.fromJson(jsonElement, type);
-		//	System.out.println("Q");
-			return storeList;
+			addAllElements(gson.fromJson(br, type));
 		} catch (IOException e) {
 			e.printStackTrace();
 
@@ -37,10 +31,21 @@ public class StoreList {
 	}
 	
 	public void addElement(Store st){
+		if (storeList == null) {
+			storeList = new ArrayList<>();
+		}
 		storeList.add(st);
 	}
 	
-
+	public void addAllElements(List<Store> list) {
+		if (storeList == null) {
+			storeList = new ArrayList<>();
+		}
+		
+		storeList.addAll(list);
+	}
+	
+	
 	
 
 }

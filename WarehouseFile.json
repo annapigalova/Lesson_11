@@ -1,4 +1,4 @@
-{ "storeList": [{
+[{
    "storeNumber": 1,
     
    "product": [{
@@ -90,4 +90,3 @@
    }
    
    ]
-}
