@@ -1,4 +1,4 @@
-{
+{ "storeList": [{
    "storeNumber": 1,
     
    "product": [{
@@ -43,6 +43,51 @@
        "description": "MacFormat is an IT magazine for these Apple enthusiasts." 
    }
    
+   
+   ]},{"storeNumber": 2,
+    
+   "product": [{
+       "category": "Book",
+       "name": "Java for dummies",
+       "manufacturerCode": "A150",
+       "creationDate":  "2013-01-01",
+       "description": "Java book for beginners" 
+   }, {
+       "category": "Book",
+       "name": "Three Comrades",
+       "manufacturerCode": "XR456",
+       "creationDate":  "2000-05-15",
+       "description": "A novel first published in 1936 by the German author Erich Maria Remarque." 
+   },
+   {
+       "category": "Book",
+       "name": "Crime and Punishment",
+       "manufacturerCode": "SD280",
+       "creationDate":  "2004-04-15",
+       "description": "A novel by the Russian author Fyodor Dostoyevsky. " 
+   },
+   {
+       "category": "Book",
+       "name": "The Master and Margarita",
+       "manufacturerCode": "Q245",
+       "creationDate":  "2015-10-21",
+       "description": "A novel by Mikhail Bulgakov, written between 1928 and 1940, but unpublished in book form until 1967." 
+   },
+   {
+       "category": "Magazine",
+       "name": "NEW YORKER",
+       "manufacturerCode": "QWE23",
+       "creationDate":  "2017-01-01",
+       "description": "Since 1925 this magazine has published some of the best writers in the country." 
+   },
+   {
+       "category": "Magazine",
+       "name": "TIN HOUSE",
+       "manufacturerCode": "WER5",
+       "creationDate":  "2013-01-01",
+       "description": "Started in 1998 but quickly became one of the most awarded and best known literary magazines in the country" 
+   }]
+   }
    
    ]
 }
