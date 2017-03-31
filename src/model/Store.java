@@ -17,6 +17,11 @@ public class Store {
 	public void setStoreNumber(int storeNumber) {
 		this.storeNumber = storeNumber;
 	}
+	
+
+	public ArrayList<Product> getProductList() {
+		return productList;
+	}
 
 	public void addProduct(Product p) {
 		productList.add(p);

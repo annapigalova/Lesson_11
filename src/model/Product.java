@@ -6,6 +6,7 @@ public class Product {
 
 	private String category;
 	private String manufacturerCode;
+	private String name;
 	private Date creationDate;
 	private String description;
 
@@ -43,12 +44,17 @@ public class Product {
 
 	@Override
 	public String toString() {
-		return "Category: "+ getCategory() + System.lineSeparator() + "Date: " + getCreationDate() + System.lineSeparator();
+		return "Category: " + getCategory() + System.lineSeparator() + "Name: " + getName() + System.lineSeparator()
+				+ "Manufacturer Code: " + getManufacturerCode() + System.lineSeparator() + "Date: " + getCreationDate()
+				+ System.lineSeparator() + "Description: " + getDescription() + System.lineSeparator();
 	}
-	
-	
-	
-	
-	
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 
 }
