@@ -1,13 +1,11 @@
 package view;
 
-
-
 public class ViewConsole implements View {
 
 	@Override
 	public void successRead() {
 
-		System.out.println("Read");
+		System.out.println("Reading file is successfull");
 	}
 
 	@Override
@@ -25,6 +23,31 @@ public class ViewConsole implements View {
 	@Override
 	public void successDelete() {
 		System.out.println("Delete");
+
+	}
+
+	@Override
+	public void errorRead() {
+
+		System.out.println("Reading failed");
+
+	}
+
+	@Override
+	public void errorSave() {
+		 
+		System.out.println("Saving failed");
+	}
+
+	@Override
+	public void errorAdd() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void errorDelete() {
+		// TODO Auto-generated method stub
 
 	}
 
