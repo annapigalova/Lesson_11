@@ -1,5 +1,8 @@
 package view;
 
+import model.Product;
+import model.Store;
+
 public class ViewConsole implements View {
 
 	@Override
@@ -35,7 +38,7 @@ public class ViewConsole implements View {
 
 	@Override
 	public void errorSave() {
-		 
+
 		System.out.println("Saving failed");
 	}
 
@@ -48,6 +51,13 @@ public class ViewConsole implements View {
 	@Override
 	public void errorDelete() {
 		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void printSearchResulLine(Store store, Product product) {
+		System.out.println(
+				"StoreNum: " + store.getStoreNumber() + System.lineSeparator() + "Prod Name: " + product.getName());
 
 	}
 

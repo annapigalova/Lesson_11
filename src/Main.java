@@ -5,24 +5,18 @@ import java.util.List;
 import controller.StoreController;
 import model.Product;
 import model.Store;
-import model.StoreList;
+import model.StoreListModel;
+import view.View;
+import view.ViewConsole;
 
 public class Main {
 
 	public static void main(String[] args) {
-		StoreController st = new StoreController();
-		
-		st.readFromJson();
-		
-		Store str = new Store();
-		str.
-		
-		st.addStoreElement();
-		
-
-	
-		
+		View view = new ViewConsole();
+		StoreListModel model = new StoreListModel(view);
+		StoreController st = new StoreController(model);
+        
+		st.doWork();
 	}
-	
 
 }

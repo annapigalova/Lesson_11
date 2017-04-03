@@ -63,7 +63,7 @@ public class Store {
 			}
 		}
 
-		return productList;
+		return searchCategoryList;
 
 	}
 

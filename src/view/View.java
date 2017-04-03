@@ -1,5 +1,8 @@
 package view;
 
+import model.Product;
+import model.Store;
+
 public interface View {
 	
 	void successRead();
@@ -10,6 +13,7 @@ public interface View {
 	void errorSave();
 	void errorAdd();
 	void errorDelete();
+	void printSearchResulLine(Store store, Product product);
 	
 	
 

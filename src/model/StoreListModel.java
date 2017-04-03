@@ -13,9 +13,17 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
-public class StoreList {
+import view.View;
+import view.ViewConsole;
+
+public class StoreListModel {
 
 	private List<Store> storeList;
+	private View view;
+
+	public StoreListModel(View view) {
+		this.view = view;
+	}
 
 	public boolean readFromJson(String filename) {
 
@@ -26,14 +34,14 @@ public class StoreList {
 			Type type = new TypeToken<List<Store>>() {
 			}.getType();
 			addAllElements(gson.fromJson(br, type));
-
+			view.successRead();
 			return true;
 
 		} catch (IOException e) {
-			e.printStackTrace();
+			view.errorRead();
+			return false;
 
 		}
-		return false;
 
 	}
 
@@ -56,18 +64,31 @@ public class StoreList {
 		return storeList;
 	}
 
-	public boolean saveToFile(String filename) {
+	public void saveToFile(String filename) {
 
 		try (Writer writer = new FileWriter(filename)) {
 			Gson gson = new GsonBuilder().create();
 			gson.toJson(storeList, writer);
-			return true;
+			view.successSave();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
+			view.errorSave();
 		} catch (IOException e) {
 			e.printStackTrace();
+			view.errorSave();
 		}
-		return false;
+
+	}
+	
+	public void searchByCategory(String category){
+		for(Store st : storeList){
+			List<Product> listOfProduct = st.searchByCategory(category);
+			for(Product pr : listOfProduct){
+				view.printSearchResulLine(st, pr);
+				
+			}
+		}
+	
 	}
 
 }
